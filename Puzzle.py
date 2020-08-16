@@ -35,7 +35,7 @@ def variableReset():
     blue   = (0, 0, 255)
 
 def IntroScreen():
-    textIntro = font2.render("'a' to assign/reassign all properties, press 'd' to draw the board, press q to quit", True, (0,255,255))
+    textIntro = font2.render("'a' to assign/reassign all properties, press 's' to solve, press 'q' to quit, and 'r' to reassign n.", True, (0,255,255))
     textIntroRect = textIntro.get_rect()
     textIntroRect.center = (int(H/2), int(W/2))
     win.fill((0,0,0))
@@ -246,8 +246,6 @@ def main():
                     variableReset()
                 elif event.key == pygame.K_a:
                     assign()
-                    draw()
-                elif event.key == pygame.K_d:
                     draw()
                 elif event.key == pygame.K_s:
                     Solution()
