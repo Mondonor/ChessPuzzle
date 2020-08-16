@@ -208,11 +208,12 @@ def Solution():
     squareList[indexor][2] = squareList[indexor][2] * (-1)
    
     
-    print(f"YOU MUST FLIP THE {indexor+1}'th BUTTON!!!")
-    textBUTTON = font2.render(f"YOU MUST FLIP THE {indexor+1}'th BUTTON!!!", True, (0,0,255))
+    print(f"YOU MUST FLIP THE {indexor+1}'th COIN!!!")
+    textBUTTON = font2.render(f"YOU MUST FLIP THE {indexor+1}'th COIN!!!", True, (0,0,255))
     textBUTTONRect = textBUTTON.get_rect()
     textBUTTONRect.center = (int(.82*W), int(2*H/14))
     win.blit(textBUTTON, textBUTTONRect)
+    pygame.display.update()
     
     
     for o in range(bits):
