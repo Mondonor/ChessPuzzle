@@ -117,7 +117,6 @@ def draw():
     win.blit(text5,text5Rect)
     win.blit(text6,text6Rect)
     win.blit(text7,text7Rect)
-    print(bitList)
 
 
 
@@ -194,10 +193,7 @@ def Solution():
     for x in range(bits):
         if (bitList[x][2]+1)/2 != keyBits[x]:
             fixerList.append(x)
-
-    print(bitList)
-    print(fixerList)
-    print(keyBits)
+            
     indexor = 0
 
     for y in range(len(squareList)):
@@ -213,6 +209,11 @@ def Solution():
    
     
     print(f"YOU MUST FLIP THE {indexor+1}'th BUTTON!!!")
+    textBUTTON = font2.render(f"YOU MUST FLIP THE {indexor+1}'th BUTTON!!!", True, (0,0,255))
+    textBUTTONRect = textBUTTON.get_rect()
+    textBUTTONRect.center = (int(.82*W), int(2*H/14))
+    win.blit(textBUTTON, textBUTTONRect)
+    
     
     for o in range(bits):
         bitList[o][2] = 1
@@ -236,7 +237,6 @@ def main():
     r = True
     while r:
         for event in pygame.event.get():
-            print(event)
             if event.type == pygame.QUIT:
                 r = False
             if event.type == KEYDOWN:
