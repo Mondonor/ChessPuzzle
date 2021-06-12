@@ -19,12 +19,12 @@ My solution is based on the basic assumptions:
    but for the sake of visualization I will use this assumption going forward).
    
 From these assumptions, one can conclude:
-1) The number of 'bits' required to relay this positional data is found by: bits >= log(base2)(n^2). We will work with the minimum number.
+1) The number of 'bits' required to relay this positional data is found by: bits >= log(base2)(n^2). We will work with the minimum integer.
 2) To account for any starting position of the key / randomized starting condition of the coins, one must, with one coin flip, be able to
-   uniquely change any specific bit (or any combination of bits) in the calculated binary number representing the key's position.
+   uniquely change any specific bit (or any combination of bits) in the calculated binary number representing the key's position, as calculated by the state of the chessboard.
 3) The number of unique changes one must be able to make can be found by: sum (k = 0, number of bits) {(number of bits) CHOOSE (k)}.
 4) This gives us the condition on which this puzzle is solvable. The number of squares on the board must be AT LEAST the number of 
-   unique changes one must be able to make, so for our square geometry: n ^ 2 >= sum (k = 0, number of bits) {(number of bits) CHOOSE (k)}.
+   unique changes possbile to the binary number representing the key's position, so for our square geometry: n ^ 2 >= sum (k = 0, number of bits) {(number of bits) CHOOSE (k)}.
 5) From our Possibility Condition, if one calculates all n's for which it is possible up through n = 10000, one sees that only n's which are
    integer exponents of 2 have possible solutions, although I have yet to produce a rigorous proof showing this always must be the case.
    
